@@ -89,11 +89,50 @@ function mostrarResultado() {
       }
     });
   
-    resultadoTest.innerHTML =
-      "Usted ha acertado " +
-      respuestasCorrectas +
-      " preguntas de un total de " +
-      preguntas.length;
+  let resultadoTest=respuestasCorrectas+preguntas.length;
+  //console.log (resultadoTest)
+  switch (resultadoTest){
+    case 5:Swal.fire({
+      title: 'FELICIDADES!!!',
+      text: 'tu casa es: hufflepuff',
+      imageUrl: 'hufflepuff.png',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    });
+    break;
+    case 6 :
+      Swal.fire({
+      title: 'FELICIDADES!!!',
+      text: 'tu casa es:slytherin',
+      imageUrl: 'slytherin.png',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    });
+    break;
+    case 7:
+      Swal.fire({
+      title: 'FELICIDADES!!!',
+      text: 'tu casa es:ravenclaw',
+      imageUrl: 'ravenclaw.jpg',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    })
+    break;
+    case 8:
+       Swal.fire({
+      title: 'FELICIDADES!!!!',
+      text: 'tu casa es:gryffindor',
+      imageUrl: 'gryffindor.png',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+      footer:'IMPORTANTE:NO TE OLVIDES QUE CASA SOS!!!!'
+    })
+  } 
+       
   }
   
   botonRes.addEventListener("click", mostrarResultado);
